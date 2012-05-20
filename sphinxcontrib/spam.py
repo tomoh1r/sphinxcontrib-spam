@@ -12,6 +12,8 @@ u'''
 from sphinx.util.compat import Directive, make_admonition
 from docutils import nodes
 
+SPAM = 'spam! spam! spam!'
+
 
 class spam(nodes.Admonition, nodes.Element):
     pass
@@ -33,7 +35,7 @@ class SpamDirective(Directive):
     def run(self):
         env = self.state.document.settings.env
 
-        ad = make_admonition(spam, self.name, ['Spam'], self.options,
+        ad = make_admonition(spam, self.name, [SPAM], self.options,
                              self.content, self.lineno, self.content_offset,
                              self.block_text, self.state, self.state_machine)
 
@@ -42,7 +44,7 @@ class SpamDirective(Directive):
         env.spam_all_spams.append({
             'docname': env.docname,
             'lineno': self.lineno,
-            'todo': ad[0].deepcopy(),
+            'spam': ad[0].deepcopy(),
         })
 
         return ad
@@ -57,7 +59,8 @@ def write_spam(app, doctree, fromdocname):
                 '(The original entry is located in %s, line %d and can be found ' \
                 % (filename, spam_info['lineno'])
         para += nodes.Text(description, description)
-        para += 'spam! spam! spam!'
+        para += nodes.reference('', '')
+        para += nodes.Text(SPAM)
         para += nodes.Text('.)', '.)')
 
 
