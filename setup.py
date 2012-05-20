@@ -1,26 +1,18 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import os.path
 from setuptools import setup, find_packages
 
-
-def read_file(name):
-    path = os.path.join(os.path.dirname(__file__), name)
-    f = open(os.path.abspath(path), 'r')
-    data = f.read()
-    f.close()
-    return data
-
 short_description = "output spam! spam! spam!"
+long_description = u'''This package contains the spam Sphinx extension.
 
-try:
-    long_description = read_file('README.rst'),
-except IOError:
-    long_description = ""
+This extension enable you to insert spam.
 
-version = '0.0.1'
+Following code is sample::
 
+    .. spam::
+'''
+version = '0.0.5'
 classifiers = [
     'Development Status :: 4 - Beta',
     'License :: OSI Approved :: BSD License',
@@ -28,7 +20,6 @@ classifiers = [
     'Programming Language :: Python :: 2.6',
     'Programming Language :: Python :: 2.7',
     ]
-
 install_requires = [
     'distribute',
     'Sphinx>=1.1.3',
