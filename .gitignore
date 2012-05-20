@@ -29,3 +29,6 @@ pip-log.txt
 # py.test
 junit-py26.xml
 junit-py27.xml
+
+# docs
+docs/_build/
