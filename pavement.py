@@ -1,11 +1,24 @@
 # -*- coding: utf-8 -*-
-
-from paver.easy import *
+from paver.easy import task, sh
 import os
 import os.path
-import subprocess
 
 project_root = os.path.abspath(os.path.dirname(__file__))
+
+
+@task
+def undev():
+    all()
+    os.chdir(project_root)
+    sh("python setup.py develop -u")
+
+
+@task
+def dev():
+    all()
+    os.chdir(project_root)
+    sh("python setup.py develop")
+
 
 @task
 def deploy():
@@ -43,10 +56,12 @@ def test():
     os.chdir(project_root)
     sh("py.test test")
 
+
 @task
 def test_all():
     os.chdir(project_root)
     sh("tox")
+
 
 @task
 def clean():
