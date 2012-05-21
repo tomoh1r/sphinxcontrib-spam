@@ -69,9 +69,8 @@ def setup(app):
 
     see http://sphinx.shibu.jp/ext/tutorial.html
     '''
+    arg_tuple = (visit_spam_node, depart_spam_node)
     app.add_node(spam,
-            html=(visit_spam_node, depart_spam_node),
-            latex=(visit_spam_node, depart_spam_node),
-            text=(visit_spam_node, depart_spam_node))
+            html=arg_tuple, latex=arg_tuple, text=arg_tuple)
     app.add_directive('spam', SpamDirective)
     app.connect("doctree-resolved", write_spam)
