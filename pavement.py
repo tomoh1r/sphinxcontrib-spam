@@ -8,7 +8,6 @@ project_root = os.path.abspath(os.path.dirname(__file__))
 
 @task
 def undev():
-    all()
     os.chdir(project_root)
     sh("python setup.py develop -u")
 
