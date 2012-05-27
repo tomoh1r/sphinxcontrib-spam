@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
 
+import os
 import sys
 from setuptools import setup, find_packages
 
 short_description = "output spam! spam! spam!"
-long_description = u'''This package contains the spam Sphinx extension.
-
-This extension enable you to insert spam.
-
-Following code is sample::
-
-    .. spam::
-'''
+long_description = '\n'.join([
+            open(os.path.join("README.rst")).read(),
+            open(os.path.join("AUTHORS.rst")).read(),
+            open(os.path.join("HISTORY.rst")).read(),
+            ])
 version = '0.4.0'
 classifiers = [
     'Development Status :: 4 - Beta',
