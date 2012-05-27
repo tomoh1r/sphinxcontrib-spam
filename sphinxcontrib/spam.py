@@ -31,20 +31,8 @@ def spam_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     :param options: Directive options for customization.
     :param content: The directive content for customization.
     '''
-    node = nodes.Text(' '.join([SPAM, text, SPAM]))
+    node = nodes.Text(' '.join([SPAM, text, SPAM]), rawtext)
     return [node], []
-
-
-class spam(nodes.Admonition, nodes.Element):
-    pass
-
-
-def visit_spam_node(self, node):
-    self.visit_admonition(node)
-
-
-def depart_spam_node(self, node):
-    self.depart_admonition(node)
 
 
 class SpamDirective(Directive):
@@ -97,8 +85,5 @@ def setup(app):
     see http://sphinx.shibu.jp/ext/tutorial.html
     '''
     app.add_role('spam', spam_role)
-    arg_tuple = (visit_spam_node, depart_spam_node)
-    app.add_node(spam, html=arg_tuple, latex=arg_tuple,
-            text=arg_tuple)
     app.add_directive('spam', SpamDirective)
     app.connect("doctree-resolved", write_spam)

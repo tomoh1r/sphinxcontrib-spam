@@ -12,7 +12,7 @@ Following code is sample::
 
     .. spam::
 '''
-version = '0.0.5'
+version = '0.4.0'
 classifiers = [
     'Development Status :: 4 - Beta',
     'License :: OSI Approved :: BSD License',
