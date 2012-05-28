@@ -2,6 +2,9 @@
 sphinxcontrib-spam
 ==================
 
+.. image:: https://secure.travis-ci.org/jptomo/sphinxcontrib-spam.png?branch=master
+   :target: http://travis-ci.org/#!/jptomo/sphinxcontrib-spam
+
 Features
 ========
 This package contains the spam Sphinx extension.
