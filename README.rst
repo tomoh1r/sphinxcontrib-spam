@@ -37,7 +37,13 @@ Requirement
 - Python 2.5 or later (not support 3.x)
 - Sphinx 1.0.x or later.
 
+<<<<<<< HEAD
 License
 =======
 Licensed under the `New BSD License <http://www.freebsd.org/copyright/freebsd-license.html>`_ .
 See the LICENSE file for specific terms.
+=======
+2. License
+==========
+This module is distributed under New BSD License. See LICENSE file for detailed conditions.
+>>>>>>> b5f5404dbba6e1b2859c9aebb5f68b0370bcfca4
