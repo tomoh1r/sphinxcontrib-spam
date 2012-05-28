@@ -2,7 +2,10 @@
 sphinxcontrib-spam
 ==================
 
-.. image:: https://secure.travis-ci.org/jptomo/sphinxcontrib-spam.png?branch=master
+|travis-ci|
+
+.. |travis-ci| image:: https://secure.travis-ci.org/jptomo/sphinxcontrib-spam.png?branch=master
+   :target: http://travis-ci.org/#!/jptomo/sphinxcontrib-spam
 
 1. What's this?
 ===============
