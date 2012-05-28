@@ -1,0 +1,11 @@
+include MANIFEST.in
+include LICENSE
+include AUTHORS.rst
+include HISTORY.rst
+include README.rst
+include docs/conf.py
+include docs/index.rst
+include docs/make.bat
+include docs/Makefile
+recursive-include sphinxcontrib *.py
+recursive-include test *.py

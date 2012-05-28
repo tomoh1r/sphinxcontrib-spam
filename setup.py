@@ -4,13 +4,13 @@ import os
 import sys
 from setuptools import setup, find_packages
 
-short_description = "output spam! spam! spam!"
+short_description = 'output spam! spam! spam!'
 long_description = '\n'.join([
-            open(os.path.join("README.rst")).read(),
-            open(os.path.join("AUTHORS.rst")).read(),
-            open(os.path.join("HISTORY.rst")).read(),
-            ])
-version = '0.4.0'
+        open('README.rst').read(),
+        open('AUTHORS.rst').read(),
+        open('HISTORY.rst').read(),
+        ])
+version = '0.4.1'
 classifiers = [
     'Development Status :: 4 - Beta',
     'License :: OSI Approved :: BSD License',
@@ -20,7 +20,7 @@ classifiers = [
     ]
 install_requires = [
     'distribute',
-    'Sphinx>=1.1.3',
+    'Sphinx>=1.0.0',
     ]
 if sys.version_info[0:2] == (2, 6):
     install_requires.append('argparse')
@@ -28,10 +28,10 @@ if sys.version_info[0:2] == (2, 6):
 setup(
     name='sphinxcontrib-spam',
     version=version,
-    url=r"https://github.com/jptomo/sphinxcontrib-spam",
+    url=r'https://github.com/jptomo/sphinxcontrib-spam',
     license='New BSD',
-    author="Tomohiro Nakamura",
-    author_email="quickness.net at gmall.com",
+    author='Tomohiro Nakamura',
+    author_email='quickness.net at gmall.com',
     description=short_description,
     long_description=long_description,
     zip_safe=False,

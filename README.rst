@@ -31,10 +31,10 @@ and run::
 
 Requirement
 ===========
-- Python 2.4 or later (not support 3.x)
+- Python 2.5 or later (not support 3.x)
 - Sphinx 1.0.x or later.
 
-2. License
-==========
+License
+=======
 Licensed under the `New BSD License <http://www.freebsd.org/copyright/freebsd-license.html>`_ .
 See the LICENSE file for specific terms.

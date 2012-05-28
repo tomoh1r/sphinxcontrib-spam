@@ -27,6 +27,7 @@ pip-log.txt
 .mr.developer.cfg
 
 # py.test
+junit-py25.xml
 junit-py26.xml
 junit-py27.xml
 
