@@ -10,7 +10,7 @@ long_description = '\n'.join([
         open('AUTHORS.rst').read(),
         open('HISTORY.rst').read(),
         ])
-version = '0.4.1'
+version = '0.4.2'
 classifiers = [
     'Development Status :: 4 - Beta',
     'License :: OSI Approved :: BSD License',
