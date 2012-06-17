@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-import os
 import sys
 from setuptools import setup, find_packages
 
@@ -39,7 +37,8 @@ setup(
     platforms='any',
     install_requires=install_requires,
     namespace_packages=['sphinxcontrib'],
-    packages=find_packages(),
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
     package_data={},
     extras_require=dict(
         test=[

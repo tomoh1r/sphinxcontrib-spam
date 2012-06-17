@@ -15,7 +15,6 @@ from docutils import nodes
 SPAM = 'spam!'
 SPAMS = 'spam! spam! spam!'
 
-
 def spam_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     u'''chang str to "spam! spam! spam!".
 

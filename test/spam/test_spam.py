@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from sphinxcontrib import spam
+from sphinxcontrib.spam import spam
 from docutils.parsers.rst.states import Inliner
 
 
